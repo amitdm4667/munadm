@@ -2,221 +2,461 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 
-<title>Trade With Munaaf</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<title>King Of Nifty — Free Telegram Channel</title>
 
 <style>
-
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
 }
 
 body{
-background:#0f172a;
-display:flex;
-justify-content:center;
-align-items:center;
-min-height:100vh;
-color:#fff;
+  font-family:Arial,sans-serif;
+  min-height:100vh;
+  color:#fff;
+  display:flex;
+  justify-content:center;
+  padding:22px 14px;
+  background:
+    radial-gradient(circle at top,#18243b 0%,#070b12 42%,#020306 100%);
 }
 
-/* CARD */
-
-.container{
-width:95%;
-max-width:420px;
-padding:30px 25px;
-border-radius:18px;
-
-background:rgba(255,255,255,0.05);
-backdrop-filter:blur(12px);
-
-border:1px solid rgba(255,255,255,0.08);
-
-box-shadow:0 20px 60px rgba(0,0,0,0.6);
-text-align:center;
+.box{
+  width:100%;
+  max-width:420px;
+  text-align:center;
 }
 
-/* LOGO */
+/* LIVE */
+.live{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  padding:7px 13px;
+  border-radius:30px;
+  background:#ffffff0a;
+  border:1px solid #ffffff18;
+  color:#ddd;
+  font-size:11px;
+  margin-bottom:20px;
+}
 
+.dot{
+  width:7px;
+  height:7px;
+  border-radius:50%;
+  background:#31e981;
+  box-shadow:0 0 12px #31e981;
+}
+
+/* PERFECT ROUND IMAGE */
+.logo-wrap{
+  position:relative;
+  width:116px;
+  height:116px;
+  margin:0 auto;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.logo-glow{
+  position:absolute;
+  inset:-14px;
+  border-radius:50%;
+  background:linear-gradient(
+    135deg,
+    #ffd84a,
+    #ffb300,
+    #229ed9
+  );
+  filter:blur(24px);
+  opacity:.38;
+}
+
+/* OUTER RING */
+.logo-ring{
+  position:relative;
+  width:116px;
+  height:116px;
+  padding:4px;
+  border-radius:50%;
+  background:linear-gradient(
+    135deg,
+    #ffe36b,
+    #f5b900,
+    #229ed9
+  );
+  box-shadow:
+    0 0 0 4px #ffffff0b,
+    0 0 32px #f5c54266;
+  overflow:hidden;
+}
+
+/* IMAGE ITSELF */
 .logo{
-width:80px;
-height:80px;
-border-radius:50%;
-border:2px solid #FFD700;
-margin-bottom:12px;
+  display:block;
+  width:100%;
+  height:100%;
+  border-radius:50%;
+  object-fit:cover;
+  object-position:center center;
+  background:#101722;
 }
 
-/* TEXT */
+/* VERIFIED DOT */
+.verify{
+  position:absolute;
+  right:-1px;
+  bottom:1px;
+  width:27px;
+  height:27px;
+  border-radius:50%;
+  background:#20d77b;
+  border:3px solid #070b12;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:14px;
+  font-weight:bold;
+  box-shadow:0 0 12px #20d77b88;
+}
 
+/* TITLE */
 h1{
-font-size:22px;
-color:#FFD700;
-margin-bottom:6px;
+  font-size:23px;
+  margin-top:18px;
+  font-weight:800;
 }
 
-h2{
-font-size:15px;
-opacity:0.9;
-margin-bottom:10px;
+.subtitle{
+  color:#b8c0cc;
+  font-size:12px;
+  margin-top:7px;
 }
 
-.sub{
-font-size:13px;
-opacity:0.7;
-margin-bottom:18px;
+/* RATING */
+.rating{
+  margin-top:10px;
+  color:#f5c542;
+  font-size:12px;
 }
 
-/* BUTTON */
-
-.btn{
-display:block;
-text-decoration:none;
-background:#22c55e;
-color:#000;
-font-weight:700;
-padding:16px;
-border-radius:10px;
-margin:12px 0;
-transition:0.3s;
+.rating span{
+  color:#9ca3af;
+  margin-left:4px;
 }
 
-.btn:hover{
-background:#16a34a;
-transform:scale(1.03);
+/* STATS */
+.stats{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:8px;
+  margin:20px 0 15px;
 }
 
-/* TRUST BOX */
-
-.trust{
-background:rgba(0,255,150,0.08);
-padding:10px;
-border-radius:10px;
-font-size:13px;
-margin-bottom:15px;
-border:1px solid rgba(0,255,150,0.2);
+.stat{
+  padding:12px 4px;
+  border-radius:14px;
+  background:#ffffff08;
+  border:1px solid #ffffff12;
 }
 
-/* LIST */
-
-.points{
-list-style:none;
-font-size:14px;
-text-align:left;
-margin:15px 0;
+.stat b{
+  display:block;
+  color:#ffd43b;
+  font-size:16px;
 }
 
-.points li{
-margin:8px 0;
+.stat span{
+  display:block;
+  margin-top:3px;
+  color:#9299a5;
+  font-size:10px;
+}
+
+/* HEADING */
+.heading{
+  font-size:17px;
+  line-height:1.45;
+  font-weight:800;
+  margin:17px 4px 7px;
+}
+
+.heading strong{
+  color:#ffd43b;
+}
+
+.desc{
+  color:#9da5b1;
+  font-size:11px;
+  line-height:1.6;
+  margin-bottom:15px;
 }
 
 /* URGENCY */
-
-.timer{
-margin-top:10px;
-font-size:13px;
-color:#facc15;
+.urgency{
+  display:inline-block;
+  width:100%;
+  padding:9px 12px;
+  border-radius:30px;
+  background:#ffd43b0d;
+  border:1px solid #ffd43b1c;
+  color:#ffd43b;
+  font-size:11px;
+  margin-bottom:12px;
 }
 
-/* SOCIAL PROOF */
-
-.proof{
-margin-top:12px;
-font-size:12px;
-opacity:0.7;
+/* TELEGRAM BUTTON */
+.telegram{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  width:100%;
+  padding:16px;
+  border-radius:16px;
+  text-decoration:none;
+  color:#fff;
+  font-size:16px;
+  font-weight:800;
+  background:linear-gradient(90deg,#229ed9,#147fc0);
+  box-shadow:0 8px 28px #229ed955;
+  transition:.2s;
 }
 
-/* FOOTER BRAND */
-
-.footer{
-margin-top:20px;
-font-size:12px;
-opacity:0.6;
+.telegram:hover{
+  transform:translateY(-2px);
 }
 
-.footer a{
-color:#38bdf8;
-text-decoration:none;
-font-weight:600;
+.telegram-icon{
+  font-size:19px;
 }
 
-.footer a:hover{
-text-decoration:underline;
+/* BENEFITS */
+.benefits{
+  margin-top:14px;
+  display:flex;
+  flex-direction:column;
+  gap:8px;
 }
 
-/* RISK */
-
-.risk{
-margin-top:10px;
-font-size:11px;
-opacity:0.5;
+.benefit{
+  text-align:left;
+  padding:11px 13px;
+  border-radius:13px;
+  background:#ffffff07;
+  border:1px solid #ffffff10;
+  color:#d7dbe1;
+  font-size:12px;
 }
 
+.check{
+  color:#45e69a;
+  font-weight:bold;
+  margin-right:7px;
+}
+
+/* SECOND BUTTON */
+.telegram2{
+  margin-top:14px;
+  padding:13px;
+  font-size:14px;
+}
+
+/* DISCLAIMER */
+.disclaimer{
+  margin-top:17px;
+  padding-top:13px;
+  border-top:1px solid #ffffff10;
+  color:#747b87;
+  font-size:9px;
+  line-height:1.55;
+}
+
+/* ADNOVA */
+.agency{
+  margin-top:12px;
+  padding-bottom:3px;
+}
+
+.agency a{
+  color:#727b89;
+  text-decoration:none;
+  font-size:9px;
+  letter-spacing:.3px;
+}
+
+.agency b{
+  color:#aeb7c4;
+  font-weight:600;
+}
+
+.agency a:hover b{
+  color:#fff;
+}
 </style>
 </head>
 
 <body>
 
-<div class="container">
+<div class="box">
 
-<img src="https://i.ibb.co/HThtfpR7/Whats-App-Image-2026-01-30-at-8-54-08-PM.jpg" class="logo">
+  <!-- LIVE -->
+  <div class="live">
+    <span class="dot"></span>
+    LIVE • Stock Market Community
+  </div>
 
-<h1>TRADE WITH MUNAAF</h1>
-<h2>NIFTY • BANKNIFTY • OPTIONS</h2>
+  <!-- PERFECT ROUND LOGO -->
+  <div class="logo-wrap">
 
-<p class="sub">
-Daily Intraday Trading Signals & Analysis
-</p>
+    <div class="logo-glow"></div>
 
-<!-- TOP BUTTON -->
-<a href="https://t.me/+2PsKWi3L1Uk3NjZl" class="btn">
-🚀 Join Free Telegram Channel
-</a>
+    <div class="logo-ring">
+      <img
+        class="logo"
+        src="https://i.ibb.co/GvhCr0Cr/m-O9-Y41-Ge3f1k7-KAAA8vz-Omy-Ye-Vh-Kv2-Mb-UAD9p-JWW3slp-N1-Xq-HT3xlwm-Oz9-Ugq-Wgp-VOUvqirr-G3ps-CSVPn-PHPh.jpg"
+        alt="King Of Nifty"
+        onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(135deg,#ffd43b,#229ed9)'; this.parentElement.innerHTML='<div style=&quot;width:100%;height:100%;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#07111d;font-size:28px;font-weight:900;&quot;>KN</div>';">
+    </div>
 
-<div class="trust">
-✔ Trusted by 5,000+ Traders <br>
-✔ Daily Consistent Setups
+    <div class="verify">✓</div>
+
+  </div>
+
+  <!-- TITLE -->
+  <h1>King Of Nifty</h1>
+
+  <div class="subtitle">
+    🏆 Stock Market Learning Community
+  </div>
+
+  <div class="rating">
+    ★★★★★ <span>Trusted Trading Community</span>
+  </div>
+
+  <!-- STATS -->
+  <div class="stats">
+
+    <div class="stat">
+      <b>42K+</b>
+      <span>Subscribers</span>
+    </div>
+
+    <div class="stat">
+      <b>5+ Yrs</b>
+      <span>Experience</span>
+    </div>
+
+    <div class="stat">
+      <b>FREE</b>
+      <span>Access</span>
+    </div>
+
+  </div>
+
+  <!-- HEADING -->
+  <div class="heading">
+    Join <strong>King Of Nifty</strong> Free Telegram Channel
+    for NIFTY, BANKNIFTY &amp; SENSEX market updates.
+  </div>
+
+  <div class="desc">
+    Get educational market insights, chart-learning concepts,
+    important levels and market discussions.
+  </div>
+
+  <!-- URGENCY -->
+  <div class="urgency">
+    🚀 Free access • Educational content • Join the community
+  </div>
+
+  <!-- MAIN CTA -->
+  <a
+    class="telegram"
+    href="https://t.me/+xP9_8ewYn19lNGRl"
+    target="_blank"
+    rel="noopener noreferrer">
+
+    <span class="telegram-icon">➤</span>
+    Join Free Telegram Channel
+
+  </a>
+
+  <!-- BENEFITS -->
+  <div class="benefits">
+
+    <div class="benefit">
+      <span class="check">✓</span>
+      Daily NIFTY &amp; BANKNIFTY Levels
+    </div>
+
+    <div class="benefit">
+      <span class="check">✓</span>
+      Chart Learning &amp; Market Concepts
+    </div>
+
+    <div class="benefit">
+      <span class="check">✓</span>
+      Educational Market Discussions
+    </div>
+
+    <div class="benefit">
+      <span class="check">✓</span>
+      Free Telegram Community Access
+    </div>
+
+  </div>
+
+  <!-- SECOND CTA -->
+  <a
+    class="telegram telegram2"
+    href="https://t.me/+xP9_8ewYn19lNGRl"
+    target="_blank"
+    rel="noopener noreferrer">
+
+   Join Free Telegram Channel
+
+  </a>
+
+  <!-- DISCLAIMER -->
+  <div class="disclaimer">
+    Disclaimer: This channel is for educational and informational
+    purposes only. We do not provide guaranteed returns or
+    investment advice. Stock market investments are subject to risk.
+  </div>
+
+  <!-- SMALL ADNOVA AGENCY LINK -->
+  <div class="agency">
+    <a
+      href="https://telegram.me/+3XoqJNLxYHswNTc1"
+      target="_blank"
+      rel="noopener noreferrer">
+      Powered by <b>AdBuild Agency</b>
+    </a>
+  </div>
+
 </div>
-
-<ul class="points">
-<li>✔ 5–7 High Probability Trades</li>
-<li>✔ Exact Entry, SL & Target</li>
-<li>✔ Beginner Friendly Guidance</li>
-<li>✔ Live Market Updates</li>
-</ul>
-
-<!-- BOTTOM BUTTON -->
-<a href="https://t.me/+2PsKWi3L1Uk3NjZl" class="btn">
-🚀 Join Free Telegram Channel
-</a>
-
-<div class="timer">
-⏳ Free Access Closing Soon
-</div>
-
-<div class="proof">
-📈 Limited Seats • Active Community
-</div>
-
-<p class="risk">
-⚠ Market investments are subject to risk
-</p>
-
-<!-- CLEAN FOOTER -->
-<div class="footer">
-Powered by 
-<a href="https://t.me/+3XoqJNLxYHswNTc1" target="_blank">
-AdsBuild Agency
-</a>
-</div>
-
-</div>
-
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '4021807741454858');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=4021807741454858&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
 </body>
 </html>
